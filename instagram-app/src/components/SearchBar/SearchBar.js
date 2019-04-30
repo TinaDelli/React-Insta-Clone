@@ -1,5 +1,4 @@
 import React from 'react';
-import camera from './camera.png';
 import logo from './logo.png';
 import './search.scss'
 
@@ -32,13 +31,13 @@ render(){
     return (
         <div className="search-bar">
             <div className="logo-img">
-            <i class="fab fa-instagram"></i> | <img src={logo} />
+            <i className="fab fa-instagram"></i> | <img className="logo-image" src={logo} />
             </div>
-            <form onSubmit={this.state.formSearch}>
+            <form onSubmit={this.state.formSearch} className="search-form">
             <input
-            placeholder="Search"
+            placeholder="&#xF002; Search"
             value={this.state.search}
-            onChange={this.state.handleChanges}
+            onChange={this.handleChanges}
             name="search"
             required
             />
