@@ -8,8 +8,16 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: dummyData,
+      data: [],
+      
     };
+  }
+
+  componentDidMount(){
+    this.setState({
+      data: dummyData
+    })
+  
   }
 
   render() {
@@ -17,11 +25,10 @@ class App extends React.Component {
     <div className="App">
     <div>
     <SearchBar searchData ={this.state.data} />
-     <PostContainer posts={this.state.data} />
+     <PostContainer posts={this.state.data} addNewLikes={this.addNewLikes} key={this.state.data.id}/>
      </div>
     </div>
   );
 }
 }
-
 export default App;

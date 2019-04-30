@@ -31,7 +31,7 @@ render(){
     return (
         <div className="search-bar">
             <div className="logo-img">
-            <i className="fab fa-instagram"></i> | <img className="logo-image" src={logo} />
+            <i className="fab fa-instagram"></i><p> | Instagram</p>
             </div>
             <form onSubmit={this.state.formSearch} className="search-form">
             <input
@@ -43,9 +43,9 @@ render(){
             />
             </form>
             <div className="search-icons">
-            <i class="far fa-compass"></i>
-            <i class="far fa-heart"></i>
-            <i class="far fa-user"></i>
+            <i className="far fa-compass"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-user"></i>
             </div>
         </div>
     )

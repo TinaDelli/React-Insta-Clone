@@ -12,16 +12,23 @@
     text-align:left;
     margin: 2rem 11.2rem;
     border:1px solid #e6e6e6;
+    box-shadow: 0px 2px 2px 2px grey;
     font-size:0.8rem;
 
     .post-header{
+        display:flex;
         padding-left:1rem;
+
+        span{
+           align-self:center;
+        }
     }
 
     .thumbnail{
         margin-right:1rem;;
         border-radius: 5rem;
         max-width:2rem;
+        max-height:2rem;
     }
 
     .likes{

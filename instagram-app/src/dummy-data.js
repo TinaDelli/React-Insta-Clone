@@ -22,7 +22,8 @@ export const dummyData = [
           username: "martinseludo",
           text: "Can't wait to try it!"
         }
-      ]
+      ],
+      id: 123
     },
     {
       username: "fortnite",
@@ -53,7 +54,8 @@ export const dummyData = [
           username: "dennis_futbol",
           text: "Is"
         }
-      ]
+      ],
+      id:234
     },
     {
       username: "playhearthstone",
@@ -76,7 +78,8 @@ export const dummyData = [
           username: "awesomebt28",
           text: "I like how Half Dome looks so old and useless"
         }
-      ]
+      ],
+      id:567
     }
   ];
 
