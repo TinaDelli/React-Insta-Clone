@@ -8,7 +8,6 @@ class CommentSection extends React.Component {
         this.state ={
             comments: props.post.comments,
             timestamp: props.post.timestamp,
-            username:"Bob123",
             text:"",
             likes: this.props.likes
         }
@@ -16,6 +15,7 @@ class CommentSection extends React.Component {
     handleText = event => {
         this.setState({
             text: event.target.value,
+
         });
     }
 

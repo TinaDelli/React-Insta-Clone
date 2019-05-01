@@ -25,13 +25,6 @@ componentDidUpdate(prevState){
 
 }
 
-
-// formSearch = event => {
-//     event.preventDefault();
-//   console.log('Success!')
-  
-// }
-
 // formSearch = (event) => {
 //     event.preventDefault();
 //     this.setState({

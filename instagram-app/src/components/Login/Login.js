@@ -4,29 +4,30 @@ class Login extends React.Component{
     constructor(){
         super();
         this.state = {
-            isLoggedIn: false
+            username: "",
+            password: ""
         }
+    }
+
+    handleInput = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
     }
 
     logIn = event => {
         event.preventDefault();
-        if(localStorage.getItem('username')){
-            localStorage.removeItem('username');
-            this.setState({isLoggedIn: false});
-        } else {
-            window.location.reload(
-            localStorage.setItem('username', 'Bob123'),
-            this.setState({isLoggedIn: true})
-            )
-        }
+        const user= this.state.username
+        localStorage.setItem('username', user)
+        window.location.reload();
     }
 
     render(){
     return <div>
                 <h1>Please Login Below</h1>
-                <form>
-                    <input placeholder="username"></input>
-                    <input placeholder="password"></input>
+                <form onChange={this.handleInput}>
+                    <input placeholder="username" value={this.state.username} type='text' name='username'  ></input>
+                    <input placeholder="password" value={this.state.password} type='text' name='password'></input>
                     <button onClick={this.logIn}>Login</button>
                 </form>
             </div>

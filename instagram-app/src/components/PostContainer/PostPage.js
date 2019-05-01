@@ -9,7 +9,8 @@ class PostPage extends React.Component {
         this.state = {
           data: [],
           display: [],
-          search: ''
+          search: '',
+          username: ''
           
         };
       }
@@ -56,6 +57,7 @@ class PostPage extends React.Component {
       posts={this.state.display} 
       addNewLikes={this.addNewLikes} 
       key={this.state.data.id}
+      username={this.state.username}
       />
      </div>)
     }
