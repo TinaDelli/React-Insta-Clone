@@ -15,11 +15,7 @@ class CommentSection extends React.Component {
     }
     handleText = event => {
         this.setState({
-        //   ...this.state.comments,
-          
             text: event.target.value,
-          
-          // [event.target.name]: event.target.value
         });
     }
 

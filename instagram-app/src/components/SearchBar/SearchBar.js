@@ -3,41 +3,57 @@ import logo from './logo.png';
 import './search.scss'
 
 class SearchBar extends React.Component {
-constructor(props){
-    super(props);
-    this.state={
-        search: "",
-        searchData: props.searchData
+
+    state={
+        // search:"",
+        searchData: [],
+        searchDisplay: []
     }
-}
 
-handleChanges = event => {
+
+componentDidMount(){
     this.setState({
-        ...this.state.searchData,
-        [event.target.name]: event.target.value
+        searchData: this.props.searchData,
+        searchDisplay: this.props.searchDisplay
     })
 }
 
-formSearch = event => {
-    event.preventDefault();
-    this.setState({
-        ...this.state.searchData,
-        search: ""
-    })
+componentDidUpdate(prevState){
+    if(this.state.searchDisplay !== prevState.searchDisplay){
+        console.log('hey I has update')
+    }
+
 }
+
+
+// formSearch = event => {
+//     event.preventDefault();
+//   console.log('Success!')
+  
+// }
+
+// formSearch = (event) => {
+//     event.preventDefault();
+//     this.setState({
+//       searchData: this.state.searchData.map(post => 
+//        { if (post.username === event){return {...post }}}
+//         ) 
+//       })
+// }
 
 
 render(){
+    console.log(this.state)
     return (
         <div className="search-bar">
             <div className="logo-img">
             <i className="fab fa-instagram"></i><p> | Instagram</p>
             </div>
-            <form onSubmit={this.state.formSearch} className="search-form">
+            <form onSubmit={event => this.props.formSearch(event, this.state.search)} className="search-form">
             <input
             placeholder="&#xF002; Search"
-            value={this.state.search}
-            onChange={this.handleChanges}
+            value={this.props.search}
+            onChange={this.props.handleChanges}
             name="search"
             required
             />
