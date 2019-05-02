@@ -1,4 +1,11 @@
 import React from 'react';
+import logo from './logo.png';
+import styled from 'styled-components';
+
+const WrappedDiv = styled.div`
+    margin:10rem 32rem 5rem;
+    padding-bottom:12rem;
+    `
 
 class Login extends React.Component{
     constructor(){
@@ -8,6 +15,7 @@ class Login extends React.Component{
             password: ""
         }
     }
+
 
     handleInput = event => {
         this.setState({
@@ -23,14 +31,18 @@ class Login extends React.Component{
     }
 
     render(){
-    return <div>
-                <h1>Please Login Below</h1>
+    return <WrappedDiv>
+                <img src={logo} alt="Instagram logo" />
+                <h1>Sign up to see photos and videos from your friends.</h1>
+                <button>Log in with Facebook</button>
+                <p>Or</p>
                 <form onChange={this.handleInput}>
                     <input placeholder="username" value={this.state.username} type='text' name='username'  ></input>
                     <input placeholder="password" value={this.state.password} type='text' name='password'></input>
                     <button onClick={this.logIn}>Login</button>
                 </form>
-            </div>
+                <form>Don't have an account? <span>Sign up</span> </form>
+            </WrappedDiv>
     }
 }
 

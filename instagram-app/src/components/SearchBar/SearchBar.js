@@ -1,6 +1,65 @@
 import React from 'react';
-import logo from './logo.png';
 import './search.scss'
+import styled from 'styled-components';
+
+
+const SearchBarDiv = styled.div`
+margin: 0 auto;
+padding: 0 7rem;
+display:flex;
+justify-content: space-between;
+align-items:baseline;
+border-bottom: 1px solid  #e6e6e6;
+
+input {
+    font-family: "FontAwesome", sans-serif;
+    font-size:0.7rem;
+    text-align:center;
+    padding: 0.5rem 3rem;
+    background: #F8F8F8;
+    border: 1px solid #b3b3b3;
+    border-radius:0.2rem;
+}
+
+`;
+
+const LogoDiv = styled.div`
+display:flex;
+max-height:6rem;
+padding-left:2.5rem;
+font-size: 2rem;
+font-weight: lighter;
+align-items:baseline;
+
+i{
+    padding-top:1rem;
+    padding-right:1rem;
+}    
+
+p{
+    font-family: 'Grand Hotel',cursive;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #262626;
+
+    span{
+        font-family:Ariel;
+        font-weight:lighter;
+        font-size:2.4rem;
+    }
+}
+`;
+
+const SearchIcons = styled.div`
+    padding-right:3rem;
+
+    i{
+        padding: 0 1rem;
+        font-size:1.5rem;
+        font-weight:100;
+    }
+`
+
 
 class SearchBar extends React.Component {
 
@@ -38,10 +97,10 @@ componentDidUpdate(prevState){
 render(){
     console.log(this.state)
     return (
-        <div className="search-bar">
-            <div className="logo-img">
-            <i className="fab fa-instagram"></i><p> | Instagram</p>
-            </div>
+        <SearchBarDiv>
+            <LogoDiv>
+            <i className="fab fa-instagram"></i><p> <span>|</span> Instagram</p>
+            </LogoDiv>
             <form onSubmit={event => this.props.formSearch(event, this.state.search)} className="search-form">
             <input
             placeholder="&#xF002; Search"
@@ -51,12 +110,12 @@ render(){
             required
             />
             </form>
-            <div className="search-icons">
+            <SearchIcons>
             <i className="far fa-compass"></i>
             <i className="far fa-heart"></i>
             <i className="far fa-user"></i>
-            </div>
-        </div>
+            </SearchIcons>
+        </SearchBarDiv>
     )
     }
 }

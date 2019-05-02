@@ -1,53 +1,49 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
-@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+// @import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
 
-.search-bar{
-    max-width:1000px;
-    margin: 0 auto;
-    display:flex;
-    justify-content: space-between;
-    align-items:baseline;
-    border-bottom: 1px solid  #e6e6e6;
+// .search-bar{
+//     max-width:1000px;
+//     margin: 0 auto;
+//     display:flex;
+//     justify-content: space-between;
+//     align-items:baseline;
+//     border-bottom: 1px solid  #e6e6e6;
 
-    input {
-        font-family: "FontAwesome", sans-serif;
-        font-size:0.7rem;
-        text-align:center;
-        padding: 0.3rem 1.5rem;
-        background: #f2f2f2;
-        border: 1px solid #b3b3b3;
-    }
+//     input {
+//         font-family: "FontAwesome", sans-serif;
+//         font-size:0.7rem;
+//         text-align:center;
+//         padding: 0.3rem 1.5rem;
+//         background: #f2f2f2;
+//         border: 1px solid #b3b3b3;
+//     }
 
-}
+// }
 
 
-.logo-img {
-    display:flex;
-    padding-left:2.5rem;
-    font-size: 2rem;
-    font-weight: lighter;
-    align-items:baseline;
+// .logo-img {
+//     // display:flex;
+//     // padding-left:2.5rem;
+//     // font-size: 2rem;
+//     // font-weight: lighter;
+//     // align-items:baseline;
     
-    .logo-image{
-        align-self:baseline;
-    }
-i{
-    padding-top:1rem;
-    padding-right:1rem;
-}    
+//     .logo-image{
+//         align-self:baseline;
+//     }
+// i{
+//     padding-top:1rem;
+//     padding-right:1rem;
+// }    
 
-p{
-    font-family: 'Grand Hotel', cursive;
-}
-}
+// p{
+//     font-family: 'Grand Hotel', cursive;
+// }
+// }
 
-.search-icons i{
-    padding: 0 1rem;
-    font-size:1.3rem;
-    font-weight:100;
-}
+// .search-icons i{
+//     padding: 0 1rem;
+//     font-size:1.3rem;
+//     font-weight:100;
+// }
 
-.search-form {
-    font-family: "FontAwesome";
-    background:red;
-}
