@@ -13,12 +13,14 @@ border-bottom: 1px solid  #e6e6e6;
 
 input {
     font-family: "FontAwesome", sans-serif;
-    font-size:0.7rem;
+    font-size:0.8rem;
+    font-weight:lighter;
     text-align:center;
     padding: 0.5rem 3rem;
     background: #F8F8F8;
-    border: 1px solid #b3b3b3;
+    border: 1px solid #e6e6e6;
     border-radius:0.2rem;
+    color:#b3b3b3;
 }
 
 `;
